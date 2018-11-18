@@ -40,14 +40,14 @@ class Map {
     return `${closestCityData.city}, ${closestCityData.state}`;
   }
 
-  getMostExtermeCity(extreme) {
-    const sordedDataByLatitude = [...this.citiesArray].sort((a, b) => a.latitude - b.latitude);
-    const sordedDataByLongitude = [...this.citiesArray].sort((a, b) => a.longitude - b.longitude);
+  getMostExtremeCity(extreme) {
+    const sortedDataByLatitude = [...this.citiesArray].sort((a, b) => a.latitude - b.latitude);
+    const sortedDataByLongitude = [...this.citiesArray].sort((a, b) => a.longitude - b.longitude);
 
-    const northernmostData = sordedDataByLatitude[sordedDataByLatitude.length - 1];
-    const southernmostData = sordedDataByLatitude[0];
-    const easternmostData = sordedDataByLongitude[sordedDataByLongitude.length - 1];
-    const westernmostData = sordedDataByLongitude[0];
+    const northernmostData = sortedDataByLatitude[sortedDataByLatitude.length - 1];
+    const southernmostData = sortedDataByLatitude[0];
+    const easternmostData = sortedDataByLongitude[sortedDataByLongitude.length - 1];
+    const westernmostData = sortedDataByLongitude[0];
 
     switch (extreme) {
       case 'northernmost':
